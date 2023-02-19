@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Youtube</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <center id="search-box">
+            <input type="text" name="search-input" id="search-input" placeholder="search here">
+            <div id="search-btn">Search</div>
+        </center>
+        <div id="container" class="row">
+            <div class="video-card hidden" id="video-card-template">
+                <img src="" alt="" class="video-thumbnail">
+                <div class="video-content">
+                    <h4 class="video-title"></h4>
+                    <h5 class="channel-title"></h5>
+                </div>
+            </div>
+
+            
+            
+            <div id="videos-list" class="col col-2">
+                
+            </div>
+            
+            <div id="player-container"  class="col col-2">
+                <h2 id="video-player-title"></h3>
+                <div id="video-player"></div>
+            </div>
+        </div>
+
+        <script src="./javascript/main.js"></script>
+    </body>
+</html>
