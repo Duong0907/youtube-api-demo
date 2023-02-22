@@ -4,10 +4,7 @@ var videoPlayer = document.getElementById('video-player');
 var videoPlayerTitle = document.getElementById('video-player-title');
 var searchInput = document.getElementById('search-input');
 var searchBtn = document.getElementById('search-btn');
-var videoList = document.getElementById('videos-list');
-
-
-
+var videoList = document.getElementById('videos-list')
 
 
 function getVideos(search) {
@@ -50,12 +47,11 @@ function setVideoClickEvent(videoCard) {
     videoCard.addEventListener('click', e => {
         videoPlayerTitle.innerHTML = 'Video'
         videoId = e.target.closest('.video-card').id;
-        var newIframe = `<iframe width="420" height="315" allowfullscreen = true
-            src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1">
-            </iframe>`;
+        var newIframe = `<iframe id="youtube-iframe" width="420" height="315"  allowfullscreen = true src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1">  </iframe>`;
         videoPlayer.innerHTML = newIframe;
     });
 }
+// width="420" height="315"
 
 function render(videos) {
     videos.forEach(video => {
@@ -118,3 +114,5 @@ searchBtn.addEventListener('click', e => {
 // ]
 
 
+// videoList.innerHTML = '';
+//             render(videos);
